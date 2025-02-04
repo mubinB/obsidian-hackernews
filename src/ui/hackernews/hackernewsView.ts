@@ -3,6 +3,7 @@ import HNPlugin from "src/main";
 
 export const VIEW_TYPE = 'hackernews-view';
 export const VIEW_DISPLAY_TEXT = 'Hacker News';
+export const VIEW_ICON = 'hackernews';
 
 export class HNView extends ItemView {
     
@@ -20,6 +21,10 @@ export class HNView extends ItemView {
 
     getDisplayText(): string {
         return VIEW_DISPLAY_TEXT;
+    }
+
+    getIcon(): string {
+        return VIEW_ICON;
     }
 
     async onOpen(): Promise<void> {
